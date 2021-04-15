@@ -87,6 +87,7 @@
                 if($TipUsuario == 'E'){
                    echo '<p><i class="fa fa-home"></i> MENU DEMANDANTE</p>
                           <li><a href="consulta.php"><i class="fa fa-edit"></i> Mis Solicitudes </a></li>
+                          <li><a href="respuesta-arbitraje.php"><i class="fa fa-edit"></i> Respuestas de Arbitraje </a></li>
                           <li><a href="mensajes.php"><i class="fa fa-envelope-o"></i> Casilla Electrónica </a></li>
                           <li><a href="perfil.php"><i class="fa fa-user"></i> Mi perfil </a></li>';
 

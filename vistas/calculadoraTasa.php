@@ -179,9 +179,9 @@ include_once 'componentes/navbar.php';
                         </tr>
                         <tr>
                             <td>  Total  </td>
+                            <td></td>
+                            <td></td>
                             <td id="totalCuentaDeterminada"></td>
-                            <td></td>
-                            <td></td>
                             <td></td>
                         </tr>
                       </tbody>

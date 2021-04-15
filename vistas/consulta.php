@@ -7,6 +7,8 @@
     <div class="card-body">
         <h2 class="titulo"><i class="fa fa-edit icoLogo"></i> Mis Solicitudes</h2>
         <p class="subtitulo">Aquí podras realizar el seguimiento de tu Tramite.</p>
+
+		
         <input type="text" value="<?php echo $idUsuario; ?>" hidden id="idUsuario" name="idUsuario">
 
         <!-- ENCABEZADOS DE LISTA -->
