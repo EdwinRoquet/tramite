@@ -72,8 +72,8 @@
  ?>
  <div class="wrapper">
 
-    <nav id="sidebar">
-        <div class="sidebar-header">
+    <nav id="sidebar" class="d-print-none">
+        <div class="sidebar-header d-print-none">
             <img src="img/logo-cear.png" alt="" class="img-fluid">
             <hr>
             <h3 class="data1 text-uppercase"><i class="fa fa-user"></i> <?php echo $NomUsuario; ?></h3>
@@ -81,7 +81,7 @@
             <h3 class="data3"><i class="fa fa-envelope-o"></i> <?php echo $datausuario['direma']; ?> </h3>
         </div>
 
-        <ul class="list-unstyled components">
+        <ul class="list-unstyled components d-print-none">
             
             <?php 
                 if($TipUsuario == 'E'){
@@ -110,7 +110,7 @@
             
         </ul>
 
-        <ul class="list-unstyled CTAs">
+        <ul class="list-unstyled CTAs d-print-none">
                 <li>
                     <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download"><i class="fa fa-download "></i>Manual de Usuario</a>
                 </li>

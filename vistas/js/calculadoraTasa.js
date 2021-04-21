@@ -1,4 +1,88 @@
 
+
+/*=================================================
+Boton de descarga
+=================================================*/
+
+document.querySelector('.btnDescargarPDF').addEventListener('click', function(e) {
+  descargarPdf();
+})
+
+
+function  descargarPdf() {
+  // const cuerpoPdf = document.body.innerHTML;
+  // const PDF = window.open('','PRINT', 'with=900,height=600');
+  // PDF.document.write('<html><head>');
+  // PDF.document.write('<title>PDF</title>');
+  // PDF.document.write('<link rel="stylesheet" href="css/plugins/bootstrap.min.css" type="text/css" >');
+  // PDF.document.write('<link rel="stylesheet" href="datatables/datatables.min.css" >');
+  // PDF.document.write('<link rel="stylesheet" href="datatables/DataTables-1.10.21/css/dataTables.bootstrap4.min.css" >');
+  // PDF.document.write('<link rel="stylesheet" href="css/styles.css" type="text/css" >');
+  // PDF.document.write('<link rel="stylesheet" href="css/estilos.css" type="text/css >');
+  // PDF.document.write('</head>');
+  // PDF.document.write('<body>');
+  // PDF.document.write(cuerpoPdf);
+  // PDF.document.write('</body></html>');
+  // PDF.document.close();
+  // PDF.print();
+
+  window.print(); 
+ 
+
+  
+}
+
+/*=================================================
+Pretensiones Indeterminadas
+=================================================*/
+
+if(document.querySelector('.divCajaMonto')){
+  //Creación del evento en el input
+  document.querySelector('#numPretenciones').addEventListener('blur',function (e) {
+    //llamado a la funcion
+   calcularMontos();
+  
+  });
+  //Creación del evento en el input
+  document.querySelector('#montoContrato').addEventListener('blur',function (e) {
+    //llamado a la funcion
+   calcularMontos();
+  
+  });
+
+
+
+/*=================================================
+ Funcion que realiza el calculo
+=================================================*/
+ function calcularMontos() {
+  let montoContrato = document.querySelector('#montoContrato');
+  let numPretenciones = document.querySelector('#numPretenciones');
+
+   if (!numPretenciones.value == '' && !montoContrato.value == '') {
+     let calculoPretension =   montoContrato.value * ( 0.031 * numPretenciones.value );
+     let calculoGastoAdministrativo =  montoContrato.value * ( 0.017 * numPretenciones.value );
+     document.querySelector('.divCajaMonto').style.display="block";
+     document.querySelector('.dataMontoUno').textContent = calculoPretension.toFixed(2);
+     document.querySelector('.dataMontoDos').textContent = calculoGastoAdministrativo.toFixed(2);
+     
+     // console.log(' hay datos')
+   }else{
+        // alert('los dos campos son obligatorios');
+   }
+ }
+
+}
+
+
+
+
+
+
+
+
+
+
 $(document).ready(function(){
 
     $('#calculoOptenido').hide();
@@ -481,7 +565,7 @@ var total=parseFloat(SecretariaTotal)+parseFloat(HonArbitroUnico);
 var cuanSecretaríaSnaOsce=total*0.35;
 var cuanHonorariosArbitroUnico=total*0.65;
 
-var totalIgv=(total*0.65)*1.18;
+var totalIgv = cuanSecretaríaSnaOsce*1.18;
 
 $("#honorarioSecretaria3Arbitros").html(cuanSecretaríaSnaOsce.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
 $("#honorarioTribunalUnico").html(cuanHonorariosArbitroUnico.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());

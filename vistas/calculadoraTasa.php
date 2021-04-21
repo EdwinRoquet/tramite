@@ -4,14 +4,14 @@ include_once 'componentes/header.php';
 include_once 'componentes/navbar.php';
 ?>
 
-<nav aria-label="breadcrumb" class="m-4">
+<nav aria-label="breadcrumb" class="m-4 d-print-none">
     <ol class="breadcrumb migas">
         <li class="breadcrumb-item"><a href="principal.php"><i class="fa fa-home"></i> Panel Principal</a></li>
         <li class="breadcrumb-item active" aria-current="page"> Calculadora Tasa</li>
     </ol>
 </nav>
-<div class="card m-4">
-    <div class="card-body">
+<div class="card m-4 ">
+    <div class="card-body d-print-none">
         <div class="jumbotron text-center">
               <h1>Calculadora de Gastos Arbitrales del OSCE</h1>
               <p>
@@ -21,7 +21,7 @@ include_once 'componentes/navbar.php';
         <hr>
     </div>
 
-    <div class="card-body">
+    <div class="card-body d-print-none">
         <div class="row">
             <div class="col-sm-3">
               
@@ -34,9 +34,60 @@ include_once 'componentes/navbar.php';
             <div class="col-sm-4">
               <input type="text" name="txtMonto" id="txtMonto" class="form-control">
             </div>
+            <br>
+            <div class="col-sm-3">
+              
+              </div>
+            <div class="col-sm-4">
+              <h3 class="mb-4"> Monto del Contrato Original (S/ )</h3>
+              <h3 class="mb-2"> Número de pretensiones indeterminada: (S/ )</h3>
+            </div>
+            <div class="col-sm-4">
+              <input type="number"  id="montoContrato"  class="form-control mb-2">
+              <input type="number"  id="numPretenciones" class="form-control">
+            </div>
+            <div class="col-sm-3">
+              
+            </div>
+            <br>
+            <hr>
+            <div class="col-sm-9 divCajaMonto d-print-none" style="display: none;" >
+              <h3 class="mb-4">Monto de la cuantía resultante por pretensiones indeterminadas</h3>
+               <div class="row d-print-none">
+               <div class="col-sm-6">
+               
+                   <h3 class=""> Importante</h3>
+                   <p>
+                   El cálculo se realizará en base al monto total de la cuantia por pretensiones indeterminadas resultante
+                   </p>
+                   <p class="mb-2">
+                   Monto a utilizar para el cálculo de honorarios de árbitro(s) por pretensión(es) indeterminada(s)
+                   </p>
+                   <p class="mb-2">
+                   Monto a utilizar para el cálculo de gastos administrativos de Secretaría Arbitral por pretensión(es) indeterminada(s)
+                   </p>
+
+               </div>
+               <div class="col-sm-3  pb-5">
+               <!-- <div class="mb-5 mt-5 block" >	</div> -->
+               <br>
+               <div class="mt-5 mb-4 dataMontoUno">	6.20</div>
+               <div class=" dataMontoDos">	6.20</div>
+
+               </div>
+               </div>
+            </div>
+
+
+
+
         </div>
+
+
+
+
         <hr>
-        <div class="row">
+        <div class="row d-print-none">
             <div class="col-sm-5">
               
             </div>
@@ -51,7 +102,16 @@ include_once 'componentes/navbar.php';
 
     </div>
     <div id="calculoOptenido">
-        <div class="card-body">
+         <div class=" viewPdf">
+         <style>
+          @media print {
+            .table{
+               border: gray 1px solid;
+            }
+          }
+         
+         </style>
+        <div class="card-body tablauno  ">
             <div class="row">
                 <div class="col-sm-6">
                     <h2 style="font-size: 18px;font-weight: 600;">Monto de la Cuantía por Pretensiones Determinadas </h2>
@@ -68,7 +128,7 @@ include_once 'componentes/navbar.php';
             <h2 style="font-size: 18px;color: #035fa0;font-weight: 600;">Para Árbitro Único</h2>
             <div class="row">
                 <div class="col-sm-12">
-                    <table class="table" id="tablaArbitroUnico">
+                    <table class="table" id="tablaArbitroUnico" width="100%">
                       <thead class="thead-light">
                         <tr>
                           <th scope="col"><strong>CONCEPTO</strong></th>
@@ -123,7 +183,7 @@ include_once 'componentes/navbar.php';
             <h2 style="font-size: 18px;color: #035fa0;font-weight: 600;">Para Tribunal Arbitral (3 Árbitros)</h2>
             <div class="row">
                 <div class="col-sm-12">
-                    <table class="table" id="tablaTribunalArbitral">
+                    <table class="table" id="tablaTribunalArbitral" width="100%">
                       <thead class="thead-light">
                         <tr>
                           <th scope="col"><strong>CONCEPTO</strong></th>
@@ -189,17 +249,24 @@ include_once 'componentes/navbar.php';
                 </div>
             </div>
             (*) Monto Neto
-            <div class="row">
-                <div class="col-sm-4">
-                </div>
-                <div class="col-sm-4">
-                    <input type="submit" name="cotizar" value="Descargar Archivo PDF" class="btn btn-success">   
-                </div>
-                <div class="col-sm-4">
-                </div>
-            </div>
+         
         </div>
     </div>
+    <div class="row mb-4 d-print-none">
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4">
+            <input type="submit" name="cotizar" value="Descargar Archivo PDF" class="btn btnDescargarPDF btn-success">   
+        </div>
+        <div class="col-sm-4">
+        </div>
+    </div>
+
+    
+
+    </div>
+      
+    
 </div>
 
 
@@ -208,5 +275,5 @@ include_once 'componentes/navbar.php';
 	include_once 'componentes/footer.php';
     
 ?>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
 <script src="js/calculadoraTasa.js" ></script>
