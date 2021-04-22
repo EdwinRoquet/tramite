@@ -561,5 +561,11 @@ $("#arbitro3").html(arbitro.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toS
 $("#total").html(cuanSecretaríaSnaOsce.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
 $("#totalIgv2").html(totalIgv.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
 
+//Total con renta (%8)
+let totalRenta = arbitro * 1.08;
+$("#arbitro1Renta").html(totalRenta.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+$("#arbitro2Renta").html(totalRenta.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+$("#arbitro3Renta").html(totalRenta.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+
 }
 

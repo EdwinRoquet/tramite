@@ -213,30 +213,7 @@ include_once 'componentes/navbar.php';
                             <td></td>
                    
                         </tr>
-                        <tr>
-                            <td>  Honorarios Árbitro 1  </td>
-                            <td id="arbitro1"></td>
-                            <td></td>
-                            <td id="honorarioArbitro1_1" style="display: none;"></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>  Honorarios Árbitro 2  </td>
-                            <td id="arbitro2"></td>
-                            <td></td>
-                            <td id="honorarioArbitro1_2" style="display: none;"></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>  Honorarios Árbitro 3  </td>
-                            <td id="arbitro3"></td>
-                            <td></td>
-                            <td id="honorarioArbitro1_3" style="display: none;"></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
+                   
                         <tr>
                             <td>  Total  </td>
                             <td></td>
@@ -247,11 +224,58 @@ include_once 'componentes/navbar.php';
                       </tbody>
                     </table>
                 </div>
+
+
+                <div class="col-sm-12">
+                    <table class="table" width="100%">
+                      <thead class="thead-light">
+                        <tr>
+                          <th scope="col"><strong>CONCEPTO</strong></th>
+                          <th scope="col"><strong>CUANTÍA DETERMINADA (S/)</strong>  </th>
+                          <th scope="col"><strong>CUANTÍA INDETERMINADA (S/)</strong>    </th>
+                          <th scope="col" style="display: none;"><strong>TOTAL (S/) </strong></th>
+                          <th scope="col"><strong>TOTAL (S/) </strong></th>
+                          <th scope="col"><strong>TOTAL CON RENTA (8%)</strong> </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      
+                        <tr>
+                            <td>  Honorarios Árbitro 1  </td>
+                            <td id="arbitro1"></td>
+                            <td></td>
+                            <td id="honorarioArbitro1_1" style="display: none;"></td>
+                            <td></td>
+                            <td id="arbitro1Renta"></td>
+                        </tr>
+                        <tr>
+                            <td>  Honorarios Árbitro 2  </td>
+                            <td id="arbitro2"></td>
+                            <td></td>
+                            <td id="honorarioArbitro1_2" style="display: none;"></td>
+                            <td></td>
+                            <td id="arbitro2Renta"></td>
+                        </tr>
+                        <tr>
+                            <td>  Honorarios Árbitro 3  </td>
+                            <td id="arbitro3"></td>
+                            <td></td>
+                            <td id="honorarioArbitro1_3" style="display: none;"></td>
+                            <td></td>
+                            <td  id="arbitro3Renta"></td>
+                        </tr>
+                      
+                      </tbody>
+                    </table>
+                </div>
+
+
             </div>
             (*) Monto Neto
          
         </div>
     </div>
+
     <div class="row mb-4 d-print-none">
         <div class="col-sm-4">
         </div>
