@@ -299,5 +299,6 @@ include_once 'componentes/navbar.php';
 	include_once 'componentes/footer.php';
     
 ?>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+<script src="js/plugins/jquery.tablesorter.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script> -->
 <script src="js/calculadoraTasa.js" ></script>
