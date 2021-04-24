@@ -107,19 +107,17 @@
                             <div class="card">
                                 <div class="card-header font-weight-bold">
                                     Narración de los Hechos
-                                    <p class="m-0">Narración breve de los hechos que desee someter a arbitraje. <br>
-                                                  (El solicitante debe hacer un resumen claro de los hechos que han generado la controversia)</p>
+              
                                 </div>
                                 <div class="card-body">
                                     <div class="form-row">
                                         <div class="col-sm-12">
                                             <div class="form-group">
-                                                <textarea class="form-control" id="txtDesNarHec" name = "DesNarHec" rows="6" placeholder="Ingrese un resumen claro de los hechos que han generado la controversia.">Que, negamos y contradecimos la posición de                                   (la parte  demandante a que declaremos/procedamos/cumplamos/con
-
-
-Que, en tal sentido, corresponde que un Tribunal Arbitral (ó Árbitro Úunico) proceda a resolver las controversias que mantenemos con nuestra contraparte
-
-                                                </textarea>
+                                                  Que, negamos y contradecimos la posición de   <input type="text" class="form-control" >
+                                                  (la parte  demandante a que declaremos/procedamos/cumplamos/con
+                                                <textarea class="form-control" id="txtDesNarHec" name = "DesNarHec" rows="6" placeholder=""></textarea>
+                                               Que, en tal sentido, corresponde que un Tribunal Arbitral (ó Árbitro Úunico) proceda a resolver las controversias que mantenemos con nuestra contraparte
+                                                <textarea class="form-control" id="txtDesNarHec" name = "DesNarHec" rows="6" placeholder=""></textarea>
                                             </div>
                                         </div>         
                                     </div>
@@ -156,7 +154,9 @@ Que, en tal sentido, corresponde que un Tribunal Arbitral (ó Árbitro Úunico) 
                                     <div class="form-row">
                                         <div class="col-sm-12">
                                             <div class="form-group">
-                                                <textarea class="form-control" id="txtPretensiones" name = "DesNarHec" rows="6" placeholder="Ingrese un resumen claro de los hechos que han generado la controversia.">Que el Tribunal Arbitral (o Árbitro Único) declare Nulo y sin efecto legal la solicitud del       (demandado).</textarea>
+                                            Que el Tribunal Arbitral (o Árbitro Único) declare Nulo y sin efecto legal la solicitud del       
+                                                <textarea class="form-control" id="txtPretensiones" name = "DesNarHec" rows="6" placeholder=""></textarea>
+                                                (demandado).
                                             </div>
                                         </div>         
                                     </div>
@@ -188,13 +188,13 @@ Que, en tal sentido, corresponde que un Tribunal Arbitral (ó Árbitro Úunico) 
                             <div class="card">
                                 <div class="card-header font-weight-bold">
                                     CUANTÍA DE LA RECONVENCIÓN
-                                    <p class="m-0">Señalar las posibles pretensiones y el monto involucrado, en cuanto sea cuantificable. <br>
                                                  </p>
                                 </div>
                                 <div class="card-body">
                                     <div class="form-row">
                                         <div class="col-sm-12">
                                             <div class="form-group">
+                                                Señalar las posibles pretensiones y el monto involucrado, en cuanto sea cuantificable
                                                 <textarea class="form-control" id="txtCuantia" name = "DesNarHec" rows="6" placeholder=""></textarea>
                                             </div>
                                         </div>         
